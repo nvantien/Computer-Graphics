@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Văn Tiền 60TH1 Bài Tập</title>
+
+    <style>
+        .button {
+            padding: 4px;
+            margin: 6px;
+            background-color: wheat;
+            color: chocolate;
+            max-width: fit-content;
+        }
+
+        .button a {
+            font-weight: bold;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+<body>
+    Chào mừng bạn đến với Đại học Thủy lợi!<br />
+    <div class="button">
+        <a onclick="ask()" href="#">Tiếp tục</a>
+    </div>
+
+    <script type="text/javascript">
+        function redirect() {
+            var login_button = document.getElementsByClassName("login_button");
+            for (var i = 0; i < login_button.length; i++) {
+                login_button[i].innerHTML = "Đang tải, xin vui lòng chờ...";
+            }
+            document.location.replace("https://tlus.edu.vn");
+        }
+
+        function ask() {
+            while (student_name == null || "") {
+                var student_name = prompt("Nhập tên của bạn: ", "");
+            }
+
+            while (student_age == null || "") {
+                var student_age = prompt("Nhập tuổi của bạn: ", "");
+            }
+            result(student_name, student_age);
+        }
+
+        function result(student_name, student_age) {
+            document.write("Sinh viên: <b>" + student_name + "</b><br/>");
+            document.write("Tuổi: <u>" + student_age + "</u><br/>");
+            document.write("<div class='button'><a class='login_button' onclick='redirect()' href='#'>Đăng nhập</a></div>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <canvas
+      id="mycanvas2"
+      width="600"
+      height="300"
+      style='border:solid;'
+    ></canvas>
+    <script type="text/javascript">
+      var canvas = document.getElementById("mycanvas2"),
+        ctx = canvas.getContext("2d");
+
+      var lingrad = ctx.createLinearGradient(10, 70, 0, 180);
+      lingrad.addColorStop(0, "white");
+    
+      lingrad.addColorStop(1, "red"); // assign gradients to fill and stroke styles
+      ctx.fillStyle = lingrad;
+
+      ctx.shadowColor = "black";
+      ctx.shadowOffsetX = 20;
+      ctx.shadowOffsetY = -20;
+      ctx.shadowBlur = 50;
+      // draw shapes
+      ctx.fillRect(170, 80, 130, 130);
+      ctx.beginPath();
+      ctx.moveTo(170, 80); // Top Corner
+      ctx.lineTo(200, 50); // Bottom Right
+      ctx.lineTo(330, 50); // Bottom Left
+      ctx.lineTo(300, 80);
+      ctx.closePath();
+      var lingrad3 = ctx.createLinearGradient(10, 70, 0, 180);
+      lingrad3.addColorStop(0, "white");
+  
+      lingrad3.addColorStop(1, "red");
+      ctx.fillStyle = lingrad3;
+      ctx.fill();
+      ctx.beginPath();
+      ctx.moveTo(300, 80); // Top Corner
+      ctx.lineTo(300, 210); // Bottom Right
+      ctx.lineTo(330, 180); // Bottom Left
+      ctx.lineTo(330, 50);
+      ctx.closePath();
+      var lingrad2 = ctx.createLinearGradient(10, 70, 0, 180);
+      lingrad2.addColorStop(0, "white");
+
+      lingrad2.addColorStop(1, "red");
+      ctx.fillStyle = lingrad2;
+      ctx.fill();
+    </script>
+</body>
+</html>

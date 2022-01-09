@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+
+<style>
+    #name {
+        border: solid gray 1px;
+    }
+</style>
+
+<body>
+    <canvas id="name" width="600" height="320"></canvas>
+
+    <script type="text/javascript">
+        var object = document.getElementById("name");
+        var context = object.getContext("2d");
+
+        // Rectangle Drawing
+        context.beginPath();
+        context.rect(0, 0, 600, 100);
+        context.fillStyle = "red";
+        context.fill();
+
+        // Adding Text
+        context.font = "20pt Inter";
+        context.fillStyle = "white";
+        context.fillText("Nguyễn Văn Tiền", 180, 60);
+
+        // Line Drawing
+        context.beginPath();
+        context.moveTo(0, 100);
+        context.lineTo(600, 320)
+        context.fillStyle = "black";
+        context.stroke();
+
+        // Circle Drawing
+        context.beginPath();
+        context.arc(300, 210, 105, 0, 2 * Math.PI);
+        context.stroke();
+
+        // Stroke Text
+        context.font = "32pt Inter";
+        context.strokeText('XIN CHÀO BẠN', 160, 225);
+
+        // Linear Gradient
+        var lgrd = context.createLinearGradient(0, 0, 200, 0);
+        lgrd.addColorStop(0, "red");
+        lgrd.addColorStop(1, "white");
+
+        context.fillStyle = lgrd;
+        context.fillRect(0, 0, 100, 50);
+
+        // Radial gradient
+        var rgrd = context.createRadialGradient(50, 75, 15, 50, 70, 60);
+        rgrd.addColorStop(0.25, "red");
+        rgrd.addColorStop(0.75, "yellow");
+
+        context.fillStyle = rgrd;
+        context.fillRect(0, 50, 100, 50);
+   // Add Shadow
+   context.shadowColor = 'red';
+        context.shadowBlur = 5;
+
+        // Triangle Drawing
+        context.beginPath();
+        var sWidth = object.width;
+        var sHeight = object.height;
+        var path = new Path2D();
+        path.moveTo((sWidth / 2) + 50, sHeight / 2);
+        path.lineTo((sWidth / 2), (sHeight / 2) - 50);
+        path.lineTo((sWidth / 2) - 50, sHeight / 2);
+        context.fill(path);
+
+        context.beginPath();
+        context.moveTo(5, 200);
+        context.lineTo(15, 220);
+        context.lineTo(5, 220);
+        context.lineTo(5, 200);
+        context.stroke();
+
+        context.fillStyle("yellow");
+        context.fill();
+
+    </script>
+</body>
+
+</html>

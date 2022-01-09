@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+    <style>
+        #mycanvas {
+            border: solid black 1px;
+        }
+    </style>
+   <body>
+      <canvas id = "mycanvas" width = "600" height = "400"></canvas>
+      <script>
+         var canvas = document.getElementById('mycanvas');
+         var context = canvas.getContext('2d');
+		
+         context.font = "50px Georgia";
+        context.strokeText("Hoiiiii", 10, 50);
+
+
+      </script>
+   </body>
+</html>

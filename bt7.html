@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+    <style>
+        #mycanvas {
+            border: solid black 1px;
+        }
+    </style>
+   <body>
+      <canvas id = "mycanvas" width = "600" height = "400"></canvas>
+      <script>
+         var canvas = document.getElementById('mycanvas');
+         var context = canvas.getContext('2d');
+		
+        context.beginPath();
+        context.moveTo(0, 0);
+        context.lineTo(600, 400)
+        context.fillStyle = "black";
+        context.stroke();
+
+      </script>
+   </body>
+</html>

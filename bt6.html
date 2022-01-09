@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+    <style>
+        #mycanvas {
+            border: solid black 1px;
+        }
+    </style>
+   <body>
+      <canvas id = "mycanvas" width = "600" height = "600"></canvas>
+      <script>
+         var canvas = document.getElementById('mycanvas');
+         var context = canvas.getContext('2d');
+		
+        context.beginPath();
+        context.rect(20, 20, 200, 200);
+        context.fillStyle = "red";
+        context.shadowBlur = 20;
+        context.shadowColor = "black";
+        context.fill();
+
+       
+      </script>
+   </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+    <style>
+        #mycanvas {
+            border: solid black 1px;
+        }
+    </style>
+   <body>
+      <canvas id = "mycanvas" width = "600" height = "400"></canvas>
+      <script>
+         var canvas = document.getElementById('mycanvas');
+         var context = canvas.getContext('2d');
+		
+         context.beginPath();
+        context.moveTo(5, 230);
+        context.lineTo(30, 230);
+        context.lineTo(30, 260);
+        context.lineTo(5, 260);
+        context.lineTo(5, 230);
+
+        context.moveTo(5, 260);
+        context.lineTo(10, 265);
+        context.lineTo(35, 265);
+        context.lineTo(30, 260);
+
+        context.moveTo(35, 265);
+        context.lineTo(35, 235);
+        context.lineTo(30, 230);
+
+        context.stroke();
+
+        context.fillStyle("red");
+        context.fill();
+
+      </script>
+   </body>
+</html>
